@@ -10,6 +10,12 @@ function Increase() {
 }
 
 const message = ref("Hello, kalibutan");
+
+const website="https://google.com";
+
+const color ="blue";
+
+const isActive = true;
 </script>
 
 <template>
@@ -23,4 +29,20 @@ const message = ref("Hello, kalibutan");
 
   <button @click="message='Hi, bebs'">Click here</button>
 
+  <a v-bind:href="website">
+    Click me
+  </a>
+
+  <p :style="{color: color}">Ooplok
+  </p>
+
+  <p :class="{active: isActive}">Sample</p>
+
 </template>
+
+<style>
+.active{
+  color: red;
+  font-weight: bold;
+}
+</style>
